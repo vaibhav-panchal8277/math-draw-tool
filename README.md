@@ -23,7 +23,7 @@ MathScribe is a modern web-based application that allows you to draw mathematica
 - Python 3.9 or higher.
 - `pip` (Python package manager).
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 1. **Navigate to the project directory**:
    ```bash
@@ -73,9 +73,7 @@ Add screenshots inside an images folder:
 3. Wait for the AI to process the image (this takes a few seconds).
 4. View the preview and copy the LaTeX code.
 
-## Testing
-
-This project uses [TestGrid.io](https://testgrid.io) for application testing and validation to ensure a smooth and reliable user experience.
+This project was tested using [TestGrid.io](https://testgrid.io)
 
 ## License
 
