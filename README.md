@@ -75,7 +75,7 @@ Add screenshots inside an images folder:
 
 ## 🧪 Testing
 
-This project uses [TestGrid](https://testgrid.io) for application testing and validation to ensure a smooth and reliable user experience.
+This project uses [TestGrid.io](https://testgrid.io) for application testing and validation to ensure a smooth and reliable user experience.
 
 ## ⚖️ License
 
