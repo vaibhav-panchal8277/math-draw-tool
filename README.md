@@ -2,7 +2,7 @@
 
 MathScribe is a modern web-based application that allows you to draw mathematical equations, formulas, and symbols on an interactive canvas and convert them into clean, copiable LaTeX code. It uses an open-source AI model (**pix2tex**) running on a local Python backend to provide fast, private, and accurate recognition without requiring any external API keys.
 
-## 🚀 Features
+## Features
 
 - **Interactive Drawing Canvas**: Smooth drawing experience with undo and clear functionality.
 - **Local AI Processing**: Uses the `pix2tex` (LatexOCR) model to process images locally.
@@ -10,7 +10,7 @@ MathScribe is a modern web-based application that allows you to draw mathematica
 - **One-Click Copy**: Easily copy the generated LaTeX to your clipboard for use in documents or editors.
 - **Premium Design**: Sleek dark-mode interface with glassmorphism and modern typography.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Vanilla HTML5, CSS3, JavaScript.
 - **Math Rendering**: KaTeX.
@@ -18,7 +18,7 @@ MathScribe is a modern web-based application that allows you to draw mathematica
 - **Backend**: Python, FastAPI, Uvicorn.
 - **AI Model**: pix2tex (LatexOCR).
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.9 or higher.
 - `pip` (Python package manager).
@@ -39,7 +39,7 @@ MathScribe is a modern web-based application that allows you to draw mathematica
    pip install albumentations==1.4.24
    ```
 
-## 🏃 Running the Application
+## Running the Application
 
 1. **Start the local Python backend**:
    ```bash
@@ -52,7 +52,7 @@ MathScribe is a modern web-based application that allows you to draw mathematica
    [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 
-## 📸 Screenshots
+## Screenshots
 
 Add screenshots inside an images folder:
 
@@ -66,17 +66,17 @@ Add screenshots inside an images folder:
 
 
 
-## 📝 Usage
+## Usage
 
 1. Use your mouse or touch screen to draw an equation on the canvas.
 2. Click the **"Convert to Formula"** button.
 3. Wait for the AI to process the image (this takes a few seconds).
 4. View the preview and copy the LaTeX code.
 
-## 🧪 Testing
+## Testing
 
 This project uses [TestGrid.io](https://testgrid.io) for application testing and validation to ensure a smooth and reliable user experience.
 
-## ⚖️ License
+## License
 
 Open Source - Feel free to use and modify!
