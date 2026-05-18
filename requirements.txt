@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pix2tex[gui]
+python-multipart
+Pillow
+albumentations==1.4.24

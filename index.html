@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathScribe | Draw & Convert Math</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-square-root-variable"></i>
+                <h1>MathScribe</h1>
+            </div>
+            <button id="settingsBtn" class="icon-btn" title="API Settings">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </button>
+        </header>
+
+        <!-- Description Section -->
+        <section class="description-section">
+            <p>Welcome to <strong>MathScribe</strong>! Simply draw any mathematical equation, formula, or symbol on the canvas below. The app will use AI to recognize your handwriting and convert it into a clean, copiable LaTeX formula ready to be used in your documents.</p>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Canvas Section -->
+            <section class="panel drawing-panel">
+                <div class="panel-header">
+                    <h2>Draw Equation</h2>
+                    <div class="tools">
+                        <button id="undoBtn" class="tool-btn" title="Undo"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="clearBtn" class="tool-btn danger" title="Clear Canvas"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="mathCanvas"></canvas>
+                </div>
+                <button id="convertBtn" class="primary-btn">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Convert to Formula
+                </button>
+            </section>
+
+            <!-- Result Section -->
+            <section class="panel result-panel">
+                <div class="panel-header">
+                    <h2>Result</h2>
+                </div>
+                
+                <div id="loadingIndicator" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Recognizing magic...</p>
+                </div>
+
+                <div id="resultContent" class="result-content hidden">
+                    <div class="preview-box">
+                        <h3>Preview</h3>
+                        <div id="mathPreview" class="math-preview"></div>
+                    </div>
+                    
+                    <div class="latex-box">
+                        <div class="latex-header">
+                            <h3>LaTeX</h3>
+                            <button id="copyBtn" class="copy-btn">
+                                <i class="fa-regular fa-copy"></i> Copy
+                            </button>
+                        </div>
+                        <pre id="latexOutput"></pre>
+                    </div>
+                </div>
+
+                <div id="placeholder" class="placeholder">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <p>Draw a mathematical equation and click convert to see the magic happen.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Local Backend Settings</h2>
+                <button id="closeModalBtn" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-desc">This app now uses a <strong>Local Python Backend</strong> with an open-source AI (pix2tex) to recognize your math equations completely for free without API keys!</p>
+                
+                <div class="help-text">
+                    <p>To start the backend, run:<br><code>python backend.py</code><br>in your terminal.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveSettingsBtn" class="primary-btn">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- KaTeX Script -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

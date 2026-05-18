@@ -1,0 +1,11 @@
+# Environments
+.env
+.env.local
+.env.*.local
+
+# Mac
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
